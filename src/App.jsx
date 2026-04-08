@@ -94,6 +94,7 @@ export default function App() {
           ::placeholder { font-family: inherit; opacity: 0.5; }
           .dock-icon { transition: transform .18s cubic-bezier(.34,1.56,.64,1); }
           .dock-icon:hover { transform: scale(1.4) translateY(-12px); }
+          @media (pointer: coarse) { .touch-hint { display: block !important; } }
         `}</style>
 
         <Wallpaper />

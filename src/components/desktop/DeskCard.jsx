@@ -37,6 +37,16 @@ export default function DeskCard({ card, zIndex, onFocus }) {
         transform: hov && !flipped ? "translateY(-4px) scale(1.025)" : "scale(1)",
         perspective: 1000
       }}>
+      {hov && card.onOpen && (
+        <div style={{ position: "absolute", top: -26, left: "50%", transform: "translateX(-50%)", whiteSpace: "nowrap", background: "rgba(0,0,0,0.7)", backdropFilter: "blur(8px)", color: "rgba(255,255,255,0.8)", fontSize: 10, fontWeight: 600, padding: "4px 10px", borderRadius: 6, zIndex: 99, pointerEvents: "none", letterSpacing: 0.3 }}>
+          Double-click to open
+        </div>
+      )}
+      {card.onOpen && (
+        <div style={{ position: "absolute", bottom: -22, left: "50%", transform: "translateX(-50%)", whiteSpace: "nowrap", color: "rgba(255,255,255,0.45)", fontSize: 10, fontWeight: 600, pointerEvents: "none", letterSpacing: 0.3, display: "none" }} className="touch-hint">
+          Double tap to open
+        </div>
+      )}
       <div style={{ transformStyle: "preserve-3d", transition: "transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)", transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)", width: "100%", height: "100%", borderRadius: 18, position: "relative" }}>
         {/* FRONT */}
         <div style={{ backfaceVisibility: "hidden", borderRadius: 18, overflow: "hidden" }}>
