@@ -17,6 +17,12 @@ export default function MobileGate({ children }) {
         <div style={{ display: "flex", alignItems: "center", gap: 10, background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 14, padding: "12px 20px", fontSize: 13, color: "rgba(255,255,255,0.7)" }}>
           Rotate to landscape to preview
         </div>
+         <div style={{ marginBlock: "10px"}}>
+          or
+        </div>
+         <div style={{ display: "flex", alignItems: "center", gap: 10, background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 14, padding: "12px 20px", fontSize: 13, color: "rgba(255,255,255,0.7)" }}>
+          Open site as Desktop Mode in your browser
+        </div>
         <style>{`@keyframes spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }`}</style>
       </div>
     );
